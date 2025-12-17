@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/image/logoo.png" type="image/x-icon">
+    <title>tripifly.in</title>
+</head>
+<body>
+
+    
+    
+
+
+    <!-- Sidebar for mobile -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>tripifly.in</h2>
+    <span class="close-btn" onclick="toggleSidebar()">✖</span>
+  </div>
+  <ul class="sidebar-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#destination">Destination</a></li>
+    <li><a href="#package">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+
+
+     
+
+<!-- HEADER SECTION -->
+
+
+ <header class="header">
+    <div id="headerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/image/1 (2).png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/image/2(2).png" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/image/3 (2).png" class="d-block w-100" alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/image/4.png" class="d-block w-100" alt="Slide 4">
+        </div>
+          <div class="carousel-item">
+          <img src="./assets/image/5.png" class="d-block w-100" alt="Slide 5">
+        </div>
+         <div class="carousel-item">
+          <img src="./assets/image/6.png" class="d-block w-100" alt="Slide 6">
+        </div>
+         <div class="carousel-item">
+          <img src="./assets/image/7.png" class="d-block w-100" alt="Slide 6">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-overlay"></div>
+
+    <div class="header-content">
+      <div class="top-nav" id="topNav">
+        <div class="nav-container">
+          <div class="brand-section">
+            <div class="logo">
+              <!-- <div class="logo-icon"> 
+                <i class="fas fa-plane"></i>
+              </div> -->
+              <div class="logo-text">
+                <h1>tripifly<span>.in</span> </h1>
+                <p>Discover the india</p>
+              </div>
+            </div>
+
+            <a href="tel:+919438366665" class="contact-btn">
+              <i class="fa-solid fa-phone"></i>
+              <h5>call us </h5>
+            </a>
+          </div>
+
+          <!-- Navigation Right -->
+          <div class="navitems" id="nav">
+            <ul>
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#destination">Popular</a></li>
+              <li><a href="#package">Package</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#service">Service</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Mobile Toggle -->
+                       <div class="togle">
+                        <div class="toggle-btn" id="toggleBtn">☰</div>
+                    </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Static Image -->
+<div class="mobile-static-image d-none">
+  <img src="./assets/image/phone2.jpg" class="img-fluid w-100" alt="Static Travel Image">
+</div>
+
+    </div>
+  </header>
+
+
+
+
+     
+<!-- about -->
+ 
+<section class="about-section" id="about">
+  
+          <h2 class="about-heading">About Us</h2>
+  <div class="about-wrapper">
+    <div class="about-img">
+      <img src="./assets/image/about-image/glass-sphere-1746506.jpg" alt="About Us" />
+    </div>
+    <div class="about-content">
+      <p>
+       We are a passionate travel team committed to delivering top-quality travel experiences. Our mission is to create comfortable, exciting, and memorable journeys that connect people with incredible destinations. With years of expertise in tour planning, hospitality, and customer service, we turn travel dreams into reality through well-crafted packages and seamless service.
+
+
+      </p>
+   
+        <ul class="list-unstyled about-list" style="font-weight: 600;">
+          <li ><span style="color: darkred; font-size: 1.5rem; margin-right: 10px; ">✓</span>TRAVEL PACKAGES</li>
+          <li ><span style="color: darkred; font-size: 1.5rem; margin-right: 10px;">✓</span>HOTELS</li>
+          <li ><span style="color: darkred; font-size: 1.5rem; margin-right: 10px;">✓</span>TRANSPORTATION</li>
+          <li><span style="color: darkred; font-size: 1.5rem; margin-right: 10px;">✓</span>AIR TICKET</li>
+          <li ><span style="color: darkred; font-size: 1.5rem; margin-right: 10px;">✓</span>TRAIN TICKET</li>
+        </ul> </div>
+      </div>
+    
+  
+</section>
+<!-- popular -->
+<section class="popular" id="destination">
+  <div class="container py-5">
+    <h2 class="section-title">Popular Destination</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/image/popular-image/popular-puri.jpg" class="card-img-top" alt="Jagannath Temple">
+          <div class="card-body">
+            <h6 class="text-muted">PURI</h6>
+            <h5 class="fw-bold">JAGANNATH TEMPLE</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card ">
+          <img src="./assets/image/popular-image/gangtok1.webp" class="card-img-top" alt="Charminar">
+          <div class="card-body">
+            <h6 class="text-muted">SIKKIM</h6>
+            <h5 class="fw-bold">GANGTOK</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./assets/image/popular-image/p3.jpg" class="card-img-top" alt="Chunnu Falls">
+          <div class="card-body">
+            <h6 class="text-muted">KORAPUT</h6>
+            <h5 class="fw-bold">DUDUMA WATERFALLS</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="text-center ">
+    <a href="destination.html" class="btn btn-outline-primary">MORE DESTINATIONS ➔ </a>
+  </div>
+  </div>
+
+</section>
+
+<!-- packages -->
+<section class="packages" id="package">
+  <div class="container py-5">
+        <div class="packages-header">
+            <h1>Checkout Our Packages</h1>
+            <p>"Explore our travel packages tailored for comfort, adventure, and every budget today!"
+</p>
+        </div>
+        
+
+                
+            <!-- Packages Grid -->
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-image" style="background-image: url('./assets/image/package-image/gangtok1.webp');">
+                    </div>
+                    <div class="package-content">
+                        <h3>GANGTOK TOUR</h3>
+                        <p>Explore the timeless spiritual and cultural essence of Varanasi, Prayagraj, Bodhgaya, and Gaya in one divine journey.</p>
+                        
+                        <div class="package-features">
+                            <div class="feature-item">
+                                <span> <i class="fas fa-map-marker-alt"></i>
+                                 Sikkim</span>
+                            </div>
+                            <div class="feature-item">
+                                
+                                <span><i class="fas fa-calendar-alt"></i> 5 Nights & 6 Days</span>
+                            </div>
+                        
+                            
+                        </div>
+                        
+                        <div class="package-footer abc">
+                            <div class="price">
+                                ₹11,000
+                                <span>per person</span>
+                            </div>
+                            <a href="https://wa.me/919861001919?text=Hi%2C%20I'm%20interested%20in%20the%20%20Gangtok%20Tour%20package." target="_blank" class="btn-book">
+                          Book Now
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <div class="package-image" style="background-image: url('./assets/image/package-image/abc.jpeg');">
+                    </div>
+                    <div class="package-content">
+                        <h3>MYSORE AND OOTY TOUR </h3>
+                        <p>Experience the royal charm of Mysore and the serene hills of Ooty in one captivating getaway.</p>
+                        
+                        <div class="package-features">
+                            <div class="feature-item">
+                                <span><i class="fas fa-map-marker-alt"></i>
+                                Tamil Nadu ,Karnataka.</span>
+                            </div>
+                            <div class="feature-item">
+                                <span><i class="fas fa-calendar-alt"></i>
+                                Mysore 2 Nights / Ooty 2 Nights</span>
+                            </div>
+                         
+                            
+                        </div>
+                        
+                        <div class="package-footer">
+                            <div class="price">
+                                ₹26,600
+                                <span>per person</span>
+                            </div>
+                            <a href="https://wa.me/919861001919?text=Hi%2C%20I'm%20interested%20in%20the%20Tropical%20MYSORE AND OOTY%20Tour%20package." target="_blank" class="btn-book">
+                             Book Now
+                                   </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-image" style="background-image: url('./assets/image/package-image/p5.webp');">
+                    </div>
+                    <div class="package-content">
+                        <h3>RAJASTAN TOURS</h3>
+                        <p>Uncover the royal heritage of Jaipur, Ajmer, Udaipur, Jodhpur, and Jaisalmer in one majestic Rajasthan tour. </p>
+                        
+                        <div class="package-features">
+                            <div class="feature-item">
+                                <span><i class="fas fa-map-marker-alt"></i>
+                                Rajastan</span>
+                            </div>
+                            <div class="feature-item">
+                                <span><i class="fas fa-calendar-alt"></i>
+                                8 Nights & 9 Days</span>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="package-footer">
+                            <div class="price">
+                                ₹31,725
+                              
+                                <span>per person</span>
+                            </div>
+                          <a href="https://wa.me/919861001919?text=Hi%2C%20I'm%20interested%20in%20the%20Tropical%20RAJASTAN TOURS%20package." target="_blank" class="btn-book">
+                              Book Now
+                           </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- More Packages Button -->
+        
+        <div class="text-center mt-4 a">
+  <a href="packages.html" class="btn btn-more">
+    VIEW MORE PACKAGES for booking ➔
+  </a>
+</div>
+    </div>
+</section>
+
+<!-- gallery -->
+
+
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Travel Moments</h2>
+      <p class="section-subtitle">Explore breathtaking destinations from around the world</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Always Visible -->
+      <div class="photo-card">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g1.jpg" alt="Maldives" loading="lazy">
+          <div class="like-count">❤️ 1.2k</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Taj Mahal</h3>
+          <p class="photographer">By Soumya</p>
+          <div class="tags">
+            <span>City</span>
+            <span>Romantic</span>
+            <span>Architecture</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="photo-card">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g2.jpeg" alt="Paris" loading="lazy">
+          <div class="like-count">❤️ 980</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Koraput</h3>
+          <p class="photographer">By Satya</p>
+          <div class="tags">
+            <span>Tropical</span>
+            <span>Nature</span>
+            <span>Culture</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="photo-card">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g3.jpg" alt="Bali" loading="lazy">
+          <div class="like-count">❤️ 870</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Gate Way Of India</h3>
+          <p class="photographer">By Sangram</p>
+          <div class="tags">
+            <span>Tropical</span>
+            <span>Modern</span>
+            <span>Culture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Initially -->
+      <div class="photo-card hidden">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g4.jpg" alt="Dubai" loading="lazy">
+          <div class="like-count">❤️ 720</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Goa</h3>
+          <p class="photographer">By Raj</p>
+          <div class="tags">
+            <span>Modern</span>
+            <span>Beach</span>
+            <span>Romantic</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="photo-card hidden">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g5.webp" alt="Switzerland" loading="lazy">
+          <div class="like-count">❤️ 650</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Taj Mahal</h3>
+          <p class="photographer">By Lipsa</p>
+          <div class="tags">
+            <span>Romantic</span>
+            <span>Architecture</span>
+            <span>Modern</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="photo-card hidden">
+        <div class="card-image">
+          <img src="./assets/image/gallery-image/g6.webp" alt="Tokyo" loading="lazy">
+          <div class="like-count">❤️ 540</div>
+        </div>
+        <div class="card-content">
+          <h3 class="location">Taj Mahal</h3>
+          <p class="photographer">By Arpita</p>
+          <div class="tags">
+            <span>City</span>
+            <span>Culture</span>
+            <span>Modern</span>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="button-container">
+      <button id="exploreBtn" class="explore-button">
+        <span>Show More </span>
+        <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> -->
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- service -->
+
+  <section class="service" id="service">
+    <div class="wedding-car-service">
+      <h2 class="section-title">Transport Service</h2>
+      <div class="subtitle-booking">
+        <p class="section-subtitle">"Reliable and affordable transport service ensuring safe, on-time travel and deliveries—anytime, anywhere."</p>
+       
+      </div>
+    </div>
+    
+    <div class="car-grid">
+      <div class="car-card">
+        <div class="car-image">
+          <img src="./assets/image/transport-image/t12.jpg" alt="White Rolls Royce">
+        </div>
+        <div class="car-content">
+          <h3>Luxury Cars</h3>
+          <p class="car-details">Book your luxury car now for a premium and stylish ride.
+Perfect for special occasions, business trips, marriage ceremony or when you want to travel in class.</p>
+          <div class="features">
+            <span class="feature">8 Hours</span>
+            <span class="feature">80 km</span>
+            <span class="feature">Driver</span>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card">
+        <div class="car-image">
+          <img src="./assets/image/transport-image/t1.jpg" alt="Red Bentley">
+        </div>
+        <div class="car-content">
+          <h3>Economy Cars</h3>
+          <p class="car-details">Book your ride now with our comfortable and budget-friendly economy cars easy, fast, and affordable.</p>
+          <div class="features">
+            <span class="feature">8 Hours</span>
+            <span class="feature">80 km</span>
+            <span class="feature">Driver</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="car-card">
+        <div class="car-image">
+          <img src="./assets/image/transport-image/t5.jpg" alt="Black Mercedes">
+        </div>
+        <div class="car-content">
+          <h3>SUVs</h3>
+          <p class="car-details">Book your SUV now for a powerful, spacious, and comfortable ride perfect for family trips and adventures.</p>
+          <div class="features">
+            <span class="feature">8 Hours</span>
+            <span class="feature">80 km</span>
+            <span class="feature">Driver</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Premium See More Button linking to another page -->
+    <div class="see-more-container ">
+      <a href="transport.html" class="see-more-btn ">
+        View Full Collection For Booking ➔
+      </a>
+    </div>
+  </section>
+
+<!-- contact -->
+
+<section class="contact" id="contact"> 
+  
+        <div class="main-container">
+        <div class="main-heading">
+            <h1>Contact Us</h1>
+        </div>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-header">
+                    <h1>Our Contact Details</h1>
+                    <p>Feel free to reach out through any channel</p>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Phone</strong>
+                            <p><a href="tel:9861001919">+91 9861001919</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            <p><a href="mailto:tripifly1990@gmail.com">tripifly1990@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Address</strong>
+                            <p>RAJA TOUR & TRAVELS
+                       INDUSTRIAL ESTATE, KHAPURIA, MADHUPATNA, CUTTACK, ODISHA, 753010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="form-containera">
+    <form id="inquiryForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+       <label for="destinationk">Destination:</label>
+      <input type="text" id="destinationk" required>
+
+      <label for="members">Number of Members:</label>
+      <input type="number" id="members" min="1" required>
+
+      <label for="travelMode">Travel Mode:</label>
+      <select id="travelMode" required>
+        <option value="">-- Select --</option>
+        <option value="Flight">Flight</option>
+        <option value="Train">Train</option>
+        <option value="Car">Car</option>
+      </select>
+
+      <div class="car-type-section" id="carTypeSection">
+        <label for="carType">Car Type:</label>
+        <select id="carType">
+          <option value="">-- Select Car Type --</option>
+          <option value="Luxury">Luxury</option>
+          <option value="Economy">Economy</option>
+          <option value="SUVs">SUVs</option>
+          <option value="Coaches">Coaches</option>
+        </select>
+      </div>
+
+      <button type="submit">Inquiry Now</button>
+    </form>
+  </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const travelMode = document.getElementById("travelMode");
+  const carTypeSection = document.getElementById("carTypeSection");
+
+  // Hide car type section by default
+  carTypeSection.style.display = "none";
+
+  // Toggle car type section
+  travelMode.addEventListener("change", function () {
+    carTypeSection.style.display = this.value === "Car" ? "block" : "none";
+  });
+
+  // Form submission handler
+  document.getElementById("inquiryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const destinationk = document.getElementById("destinationk").value;
+    const members = document.getElementById("members").value;
+    const travelMode = document.getElementById("travelMode").value;
+    const carType = document.getElementById("carType").value;
+
+    // Debug logs
+    console.log("DESTINATION VALUE:", destination);
+
+    // Build WhatsApp message
+    let message = `Name: ${name}%0ADestination: ${destinationk}%0AMembers: ${members}%0ATravel Mode: ${travelMode}`;
+    if (travelMode === "Car" && carType) {
+      message += `%0ACar Type: ${carType}`;
+    }
+
+    // Send message via WhatsApp
+    const phone = "919861001919";
+    const url = `https://wa.me/${phone}?text=${message}`;
+    window.open(url, "_blank");
+  });
+});
+
+</script>
+
+
+
+ <!-- footer laptop -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>RAJA TOURS</h3>
+                <p>Your trusted travel partner for unforgettable journeys and experiences around the world.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/RajaTour22"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vibinhigh_1980"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@Rajatourtravels"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#destination">Popular</a></li>
+                    <li><a href="#package">Packages</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Tour Packages</a></li>
+                    <li><a href="#">Hotel Booking</a></li>
+                    <li><a href="#">Transportation</a></li>
+                    <li><a href="#">Air Tickets</a></li>
+                    <li><a href="#">Train Tickets</a></li>
+                    <li><a href="#">Custom Tours</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"> </i> Khapuria Cuttack, Odisha, 753010</li>
+                    <li><i class="fas fa-phone"> </i> +91 98610 01919</li>
+                    <li><i class="fas fa-envelope"> </i> tripifly1990@gmail.com</li>
+                    <li><i class="fas fa-clock"> </i>Open 24/7 (Mon–Sun)</li>
+                </ul>
+            </div>
+        </div>
+        
+     
+        
+</footer>
+
+
+
+<!-- footer mobile-->
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Raja Tours. All Rights Reserved.</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/RajaTour22"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/vibinhigh_1980"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@Rajatourtravels"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="./main.js"></script> 
+</body>
+</html>
+
+
+
+
+
+    

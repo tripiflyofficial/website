@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase | Explore India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #D10000;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --highlight: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: var(--dark);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--light);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .btn {
+            padding: 10px 25px;
+            background: var(--secondary);
+            color: var(--light);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #FF3B30;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            background: #A80000;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('./assets/image/package-image/heading.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light);
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        /* Packages Section */
+        .section {
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-info {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .package-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .package-info p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .package-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .package-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .book-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--secondary);
+            color: var(--light);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* .book-btn:hover {
+            background: #FF3B30;
+        } */
+
+        .book-btn:active {
+            background: #A80000;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary);
+            color: var(--light);
+            padding: 100px 5%;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .client-name {
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 80px 5% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Raja<span> Tours & Travel</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Discover Incredible India</h1>
+        <p>Explore India's diverse landscapes, rich heritage, and vibrant culture with our carefully curated tour packages. From Himalayan peaks to tropical beaches, we have the perfect trip for every traveler.</p>
+        <a href="#packages" class="btn">View Packages</a>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section" id="packages">
+        <h2 class="section-title">Our Popular Packages</h2>
+        <div class="packages-grid">
+            <!-- Package 1 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p1.jpg" alt="Gangtok Tour" class="package-img">
+                <div class="package-info">
+                    <h3>GANGtOK TOUR</h3>
+                    <p>Gangtok, Kalimpong, Siliguri and Darjeeling</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i>5 Nights & 6 Days</span>
+                    </div>
+                    <!-- <div class="price">₹11,000/person</div> -->
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20GANGtOK TOUR%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p2.jpg" alt="DODHAM YATRA" class="package-img">
+                <div class="package-info">
+                    <h3>DODHAM YATRA</h3>
+                    <p>Haridwar,Kedarnath ,Badrinath and Dehradun</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 5 Nights & 6 Days</span>
+                    </div>
+                    <!-- <div class="price">₹18,800/person</div> -->
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20DODHAM YATRA%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p3.jpg" alt="Mysore and otty" class="package-img">
+                <div class="package-info">
+                    <h3>MYSORE AND OOTY TOUR PACKAGE</h3>
+                    <p>Mysore and otty</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Mysore 2 Nights / Ooty 2 Nights</span>
+                    </div>
+                    <!-- <div class="price">₹26,600/person</div> -->
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20MYSORE AND OOTY TOUR PACKAGE%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p5.webp" alt="rajastan" class="package-img">
+                <div class="package-info">
+                    <h3>RAJASTAN TOURS</h3>
+                    <p>Jaipur,Ajmer ,Udaipur ,Jodhpur and Jaisalmer </p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 8 Nights & 9 Days</span>
+                    </div>
+                    <!-- <div class="price">₹31,725/person</div> -->
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20RAJASTAN TOURS%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 5 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p4.jpg" alt="varanasi" class="package-img">
+                <div class="package-info">
+                    <h3>VARANASI</h3>
+                    <p> Explore the timeless spiritual and cultural essence of Varanasi, Prayagraj, Bodhgaya, and Gaya in one divine journey.
+</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i>4 Nights & 5 Days </span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20RAJASTAN TOURS%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 6 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p4.jpg" alt="Sikkim" class="package-img">
+                <div class="package-info">
+                    <h3>VARANASI</h3>
+                    <p>
+                        
+                        Explore the spiritual essence of Varanasi, Prayagraj, Ayodhya, Bodhgaya, and Gaya in one divine journey.
+
+                        
+                    </p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 5 Nights & 6 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20VARANASI%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 7 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p8.jpg" alt="Andaman" class="package-img">
+                <div class="package-info">
+                    <h3>Daringbadi</h3>
+                    <p> Daringbadi, nestled at 915 meters in Odisha's picturesque Kandhamal district, is a serene and popular hill station.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2 Nights & 3 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Daringbadi%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 8 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p7.jpg" alt="resort" class="package-img">
+                <div class="package-info">
+                    <h3>Vikash Eco Resorts</h3>
+                    <p>Vikash Eco Resorts, a unit of Vikash Group of Institutions, blends world-class education with serene hospitality across Odisha.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 3 Nights & 4 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Vikash Eco Resorts%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 9 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p9.png" alt="Golden Trangle Tour" class="package-img">
+                <div class="package-info">
+                    <h3> Golden Trangle Tour</h3>
+                    <p>Golden Triangle Odisha & Chilika Lake Tour covering Bhubaneswar, Konark, Puri & Chilika with **comfortable stay** and **private transport.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 4 Nights & 5 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Golden Trangle Tour%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 10 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p10.jpeg" alt="Koraput" class="package-img">
+                <div class="package-info">
+                    <h3>Koraput</h3>
+                    <p>Explore scenic Koraput in a 3-day guided tour filled with nature, tribal culture, and **authentic local** flavours.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2 Nights & 3 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Koraput%20Tour%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 11 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p11.jpeg" alt="Uttarakhand" class="package-img">
+                <div class="package-info">
+                    <h3>Odisha Wildlife Tour</h3>
+                    <p>Discover Odisha's rich wildlife on a 9-day tour covering Similipal, Bhitarkanika, Chilika & more with stay and transport.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 8 Nights & 9 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Odisha Wildlife Tour%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Package 12 -->
+            <div class="package-card">
+                <img src="./assets/image/package-image/p12.jpg" alt="Mumbai" class="package-img">
+                <div class="package-info">
+                    <h3>Thailand Tour</h3>
+                    <p>Experience the best of Thailand with a 5-day tour covering Pattaya & Bangkok, including Coral Island, city sights, and optional Safari World visit.</p>
+                    <div class="package-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 4 Nights & 5 Days</span>
+                    </div>
+                    <a href="https://wa.me/919861001919?text=I%20want%20to%20book%20Thailand Tour%20package" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"The Kashmir package exceeded all our expectations. The houseboat stay was luxurious and the itinerary was perfectly balanced between activities and relaxation."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="client-img">
+                    <div>
+                        <div class="client-name">Priya Sharma</div>
+                        <div>Kashmir Paradise, March 2024</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Our Rajasthan tour was magical. The heritage hotels were beautiful and the guides were very knowledgeable. Worth every penny!"</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="client-img">
+                    <div>
+                        <div class="client-name">Rahul Patel</div>
+                        <div>Rajasthan Royal Tour, January 2023</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The Kerala backwaters package was the perfect honeymoon. Private, romantic, and everything was taken care of. We didn't have to worry about a thing."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="client-img">
+                    <div>
+                        <div class="client-name">Salony</div>
+                        <div>Kerala Backwaters, December 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Incredible India</h3>
+                <p>We create unforgettable travel experiences across India with carefully curated packages and exceptional service.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/RajaTour22"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vibinhigh_1980"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@Rajatourtravels"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Popular Packages</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Kashmir Paradise</a></li>
+                    <li><a href="#">Rajasthan Royal Tour</a></li>
+                    <li><a href="#">Kerala Backwaters</a></li>
+                    <li><a href="#">Ladakh Road Trip</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> RAJA TOUR & TRAVELS
+                       INDUSTRIAL ESTATE, KHAPURIA, MADHUPATNA, CUTTACK, ODISHA, 753010 </p>
+                <p><i class="fas fa-phone"></i> +91 9861001919</p>
+                <p><i class="fas fa-envelope"></i> tripifly1990@gmail.com</p>
+            </div>
+        </div>
+       
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // WhatsApp number validation
+        function validateWhatsAppNumber() {
+            const whatsappNumber = '9861001919';
+            if(!whatsappNumber || whatsappNumber.length < 10) {
+                console.error('Please set a valid WhatsApp number in all links');
+            }
+        }
+
+        // Call validation on load
+        validateWhatsAppNumber();
+    </script>
+</body>
+</html>
